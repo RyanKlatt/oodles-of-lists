@@ -11,7 +11,7 @@ import { NavController } from 'ionic-angular';
   selector: 'page-checklist-page',
   templateUrl: 'checklist-page.html'
 })
-export class ChecklistPagePage {
+export class ChecklistPage {
 
   constructor(public navCtrl: NavController) {}
 
