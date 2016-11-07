@@ -1,22 +1,22 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { HomePage } from '../home/home';
 
-/*
-  Generated class for the IntroPage page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
-  selector: 'page-intro-page',
+  selector: 'intro-page',
   templateUrl: 'intro-page.html'
 })
 export class IntroPage {
 
-  constructor(public navCtrl: NavController) {}
+  slideOptions: any;  
 
-  ionViewDidLoad() {
-    console.log('Hello IntroPagePage Page');
+  constructor(public nav: NavController){
+    this.slideOptions = {
+      pager: true
+    };
   }
 
+  goToHome(): void {
+    this.nav.setRoot(HomePage);
+  }
 }

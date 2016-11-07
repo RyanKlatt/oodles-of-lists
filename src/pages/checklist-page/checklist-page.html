@@ -12,7 +12,7 @@
 
 <ion-content>
 
-  <ion-list>
+  <ion-list no-lines>
 
     <ion-item-sliding *ngFor="let item of checklist.items">
 
@@ -23,7 +23,7 @@
 		</ion-item>
 
 		<ion-item-options>
-			<button ion-button icon-only color="light" (click)="renameItem(item)"><ion-icon name="clipboard"></ion-icon></button>
+			<button ion-button icon-only color="secondary" (click)="renameItem(item)"><ion-icon name="clipboard"></ion-icon></button>
 			<button ion-button icon-only color="danger" (click)="removeItem(item)"><ion-icon name="trash"></ion-icon></button>
 		</ion-item-options>
 	</ion-item-sliding>

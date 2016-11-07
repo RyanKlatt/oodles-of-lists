@@ -10,7 +10,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
+  <ion-list no-lines>
 
     <ion-item-sliding *ngFor="let checklist of checklists">
 
@@ -20,7 +20,7 @@
       </button>
 
       <ion-item-options>
-        <button ion-button icon-only color="light" (click)="renameChecklist(checklist)"><ion-icon name="clipboard"></ion-icon></button>
+        <button ion-button icon-only color="secondary" (click)="renameChecklist(checklist)"><ion-icon name="clipboard"></ion-icon></button>
         <button ion-button icon-only color="danger" (click)="removeChecklist(checklist)"><ion-icon name="trash"></ion-icon></button>
       </ion-item-options>
       

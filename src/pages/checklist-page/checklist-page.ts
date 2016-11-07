@@ -17,7 +17,7 @@ export class ChecklistPage {
 
 	    let prompt = this.alertCtrl.create({
 	      title: 'Add Item',
-	      message: 'Enter the name of the task for this checklist below:',
+	      message: 'Enter the name of the item for this checklist below:',
 	      inputs: [
 	        {
 	          name: 'name'
