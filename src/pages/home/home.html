@@ -15,8 +15,8 @@
     <ion-item-sliding *ngFor="let checklist of checklists">
 
       <button ion-item (click)="viewChecklist(checklist)" class="home-item">
-          {{checklist.title}}
-          <span class="secondary-detail">{{checklist.items.length}} items</span>
+          <span>{{checklist.title}}</span>
+          <span class="secondary-detail">{{checklist.items.length}} items ({{itemsCount(checklist)}} completed)</span>
       </button>
 
       <ion-item-options>

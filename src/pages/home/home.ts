@@ -62,7 +62,7 @@ export class HomePage {
   addChecklist(): void {
     let prompt = this.alertCtrl.create({
       title: 'New List',
-      message: 'Enter the name of your new list below:',
+      message: 'Enter name of list:',
       inputs: [
         {
           name: 'name'
@@ -95,7 +95,7 @@ export class HomePage {
 
     let prompt = this.alertCtrl.create({
       title: 'Rename List',
-      message: 'Enter the new name of this list below:',
+      message: 'Enter new name of list:',
       inputs: [
         {
           name: 'name'
@@ -140,6 +140,18 @@ export class HomePage {
       this.save();
     }
 
+  }
+
+  itemsCount(checklist): number {
+    let itemsArray = checklist.items;
+    let count = 0;
+
+    itemsArray.forEach((item) => {
+      if(item.checked) {
+        count++;
+      }
+    });
+    return count;
   }
 
   save(): void {

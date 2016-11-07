@@ -29,3 +29,17 @@ button {
 .button[icon-only] {
     min-width: 10em !important;
 }
+.list-md ion-item-options .button {
+	box-shadow: inset 0px 1px 27px 0px #494b4e;
+	margin: 0px; 
+	height: 100%;
+}
+.list-md > .item-wrapper:last-child .item-block {
+	border-bottom: none;
+}
+.list-md > .item-wrapper:first-child .item-block {
+	border-top: none;
+}
+home-page .home-item, .item-cover {
+	box-shadow: inset 0px 1px 16px 0px #494b4e;
+}

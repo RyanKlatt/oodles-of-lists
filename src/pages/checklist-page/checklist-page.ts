@@ -17,7 +17,7 @@ export class ChecklistPage {
 
 	    let prompt = this.alertCtrl.create({
 	      title: 'Add Item',
-	      message: 'Enter the name of the item for this checklist below:',
+	      message: 'Enter name of new item:',
 	      inputs: [
 	        {
 	          name: 'name'
@@ -52,7 +52,7 @@ export class ChecklistPage {
 
 	    let prompt = this.alertCtrl.create({
 	      title: 'Rename Item',
-	      message: 'Enter the new name of the task for this checklist below:',
+	      message: 'Enter new name of this item:',
 	      inputs: [
 	        {
 	          name: 'name'
