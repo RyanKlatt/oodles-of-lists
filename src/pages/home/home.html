@@ -15,13 +15,13 @@
     <ion-item-sliding *ngFor="let checklist of checklists">
 
       <button ion-item (click)="viewChecklist(checklist)" class="home-item">
-          <span>{{checklist.title}}</span>
+          <span style="font-size: 22px;">{{checklist.title}}</span>
           <span class="secondary-detail">{{checklist.items.length}} items ({{itemsCount(checklist)}} completed)</span>
       </button>
 
       <ion-item-options>
-        <button ion-button icon-only color="secondary" (click)="renameChecklist(checklist)"><ion-icon name="clipboard"></ion-icon></button>
-        <button ion-button icon-only color="danger" (click)="removeChecklist(checklist)"><ion-icon name="trash"></ion-icon></button>
+        <button ion-button icon-only color="secondary" (click)="renameChecklist(checklist)"><ion-icon style="    font-size: 4.8em;" name="clipboard"></ion-icon></button>
+        <button ion-button icon-only color="danger" (click)="removeChecklist(checklist)"><ion-icon style="    font-size: 4.8em;" name="trash"></ion-icon></button>
       </ion-item-options>
       
     </ion-item-sliding>
