@@ -5,6 +5,7 @@ import { Storage } from '@ionic/storage';
 import { HomePage } from '../pages/home/home';
 import { IntroPage } from '../pages/intro-page/intro-page';
 import { ChecklistPage } from '../pages/checklist-page/checklist-page';
+import { SettingsPage } from '../pages/settings/settings';
 import { Data } from '../providers/data';
 
 @NgModule({
@@ -12,7 +13,8 @@ declarations: [
 MyApp,
 HomePage,
 IntroPage,
-ChecklistPage
+ChecklistPage,
+SettingsPage
 ],
 
 imports: [
@@ -24,7 +26,8 @@ entryComponents: [
 MyApp,
 HomePage,
 IntroPage,
-ChecklistPage
+ChecklistPage,
+SettingsPage
 ],
 
 providers: [Storage, Data]

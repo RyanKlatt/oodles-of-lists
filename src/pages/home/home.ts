@@ -4,6 +4,7 @@ import { ChecklistPage } from '../checklist-page/checklist-page';
 import { ChecklistModel } from '../../models/checklist-model';
 import { Data } from '../../providers/data';
 import { IntroPage } from '../intro-page/intro-page';
+import { SettingsPage } from '../settings/settings';
 import { Storage } from '@ionic/storage';
 
 @Component({
@@ -128,6 +129,11 @@ export class HomePage {
   viewChecklist(checklist): void {
     this.nav.push(ChecklistPage, {
       checklist: checklist
+    });
+  }
+
+  viewSettings(): void {
+    this.nav.push(SettingsPage, {
     });
   }
 
