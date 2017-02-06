@@ -15,9 +15,11 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+/*$themeColor: #2c69cc;
+
 .content-md, ion-content {
-	background-color: #2c69cc;
-}
+	background-color: $themeColor;
+}*/
 
 .logo {
 	max-height: 39px;
