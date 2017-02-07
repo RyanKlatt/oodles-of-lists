@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'page-settings',
@@ -10,16 +11,19 @@ export class SettingsPage {
   myColor: string;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  	this.myColor = this.navParams.get('myColor');
+  constructor(public navCtrl: NavController, public storage: Storage) {
+
   }
 
   ionViewDidLoad() {
-    
+    this.storage.get('myColor').then((myColor) => {
+       this.myColor = this.myColor;
+     })
   }
 
-  changeBackgroundColor(myColor:string) {
-    this.myColor = myColor;
+  changeBackgroundColor(myColor) {
+    this.storage.set('myColor', 'myColor');
+       this.myColor = myColor;
   }
 
 }
