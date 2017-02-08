@@ -7,6 +7,7 @@ import { IntroPage } from '../pages/intro-page/intro-page';
 import { ChecklistPage } from '../pages/checklist-page/checklist-page';
 import { SettingsPage } from '../pages/settings/settings';
 import { Data } from '../providers/data';
+import { Settings } from '../providers/settings';
 
 @NgModule({
 declarations: [
@@ -30,7 +31,7 @@ ChecklistPage,
 SettingsPage
 ],
 
-providers: [Storage, Data]
+providers: [Storage, Data, Settings]
 })
 
 export class AppModule {}
