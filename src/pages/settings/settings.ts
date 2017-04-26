@@ -9,17 +9,11 @@ import { Storage } from '@ionic/storage';
 })
 export class SettingsPage {
 
+  settingsColor = "#000";
+
 
   constructor(public navCtrl: NavController, public settingsService: Settings, public storage: Storage) {
 
-  }
-
-  ionViewDidLoad() {
-    this.settingsService.load();
-  }
-
-  changeBackgroundColor(settingsColor){
-    this.settingsService.changeBackgroundColor(settingsColor); 
   }
 
 }
