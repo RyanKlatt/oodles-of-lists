@@ -8,9 +8,11 @@ import { NavController, NavParams, AlertController } from 'ionic-angular';
 export class ChecklistPage {
 
 	checklist: any;
+	background: any;
 
 	constructor(public nav: NavController, public navParams: NavParams, public alertCtrl: AlertController){
 		this.checklist = this.navParams.get('checklist');
+		this.getColors();
 	}
 
 	addItem(): void {
@@ -82,5 +84,14 @@ export class ChecklistPage {
 			}
 		});
 	}
+
+	getColors() {
+	  	if(localStorage.getItem('background') != null){
+	  		this.background = localStorage.getItem('background');
+	  	}
+	  	else {
+	  	this.background = "#2C69CC";
+	  	}
+	 }
 
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController, Platform } from 'ionic-angular';
+import { NavController, AlertController, Platform, NavParams } from 'ionic-angular';
 import { ChecklistPage } from '../checklist-page/checklist-page';
 import { ChecklistModel } from '../../models/checklist-model';
 import { Data } from '../../providers/data';
@@ -14,13 +14,13 @@ import { Storage } from '@ionic/storage';
 export class HomePage {
 
   checklists: ChecklistModel[] = [];
+  background: any;
 
-  constructor(public nav: NavController, public dataService: Data, public alertCtrl: AlertController, public storage: Storage, public platform: Platform) {
-
+  constructor(public navParams: NavParams, public nav: NavController, public dataService: Data, public alertCtrl: AlertController, public storage: Storage, public platform: Platform) {
   }
 
   ionViewDidLoad(){
-
+ 
     this.platform.ready().then(() => {
 
       this.storage.get('introShown').then((result) => {
