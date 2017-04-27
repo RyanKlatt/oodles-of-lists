@@ -1,33 +1,28 @@
 <ion-header>
-
   <ion-navbar style="color: #fff;">
     <ion-title>Color Settings</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-<ion-content padding [style.backgroundColor]="settingsColor">
-	<form (submit)="setColors()">
-		<ion-list>
-			<ion-item>
-				<ion-label>Background Color</ion-label>
-					<ion-select [(ngModel)]="background" name="background">
-						<ion-option value="#000">Black</ion-option>
-						<ion-option value="#fff">White</ion-option>
-						<ion-option value="#0400ff">Blue</ion-option>
-						<ion-option value="#ffff00">Yellow</ion-option>
-					</ion-select>
-			</ion-item>
-			<ion-item>
-				<ion-label>Header Color</ion-label>
-					<ion-select [(ngModel)]="header" name="header">
-						<ion-option value="#000">Black</ion-option>
-						<ion-option value="#fff">White</ion-option>
-						<ion-option value="#0400ff">Blue</ion-option>
-						<ion-option value="#ffff00">Yellow</ion-option>
-					</ion-select>
-			</ion-item>
-			<button ion-button type="submit" block>Save Changes</button>
-		</ion-list>
-	</form>
+<ion-content padding [style.background]="background">
+	<ion-list>
+		<ion-item>
+			<ion-label>Background Color</ion-label>
+				<ion-select [(ngModel)]="background" name="background">
+					<ion-option value="#2C69CC">Blue</ion-option>
+					<ion-option value="#000">Black</ion-option>
+					<ion-option value="#fff">White</ion-option>
+					<ion-option value="#ffff00">Yellow</ion-option>
+				</ion-select>
+		</ion-item>
+		<!--<ion-item>
+			<ion-label>Header Color</ion-label>
+				<ion-select [(ngModel)]="header" name="header">
+					<ion-option value="#000">Black</ion-option>
+					<ion-option value="#fff">White</ion-option>
+					<ion-option value="#0400ff">Blue</ion-option>
+					<ion-option value="#ffff00">Yellow</ion-option>
+				</ion-select>
+		</ion-item>-->
+	</ion-list>
 </ion-content>

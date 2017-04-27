@@ -9,11 +9,14 @@ import { Storage } from '@ionic/storage';
 })
 export class SettingsPage {
 
-  settingsColor = "#000";
-
+  background: any;
 
   constructor(public navCtrl: NavController, public settingsService: Settings, public storage: Storage) {
+  	this.getColors();
+  }
 
+  getColors() {
+  	this.background = "#2C69CC";
   }
 
 }
