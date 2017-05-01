@@ -21,16 +21,8 @@ export class HomePage {
    
   }
 
-  ionViewDidEnter(){
-        this.storage.get('background').then((result) => {
-      if(result != null){
-        this.background = localStorage.getItem('background');
-        console.log(this.background);
-      }
-      else {
-        this.background = "#2C69CC";
-      }
-    });
+  ionViewWillEnter(){
+    this.getColors();
   }
 
   ionViewDidLoad(){
@@ -199,5 +191,14 @@ export class HomePage {
     });
     prompt.present();
   }
+
+  getColors() {
+      if(localStorage.getItem('background') != null){
+        this.background = localStorage.getItem('background');
+      }
+      else {
+      this.background = "#2C69CC";
+      }
+   }
 
 }
