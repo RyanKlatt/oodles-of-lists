@@ -23,6 +23,7 @@ export class SettingsPage {
   	else {
   	this.background = "#2C69CC";
   	}
+
   }
 
   save() {

@@ -17,6 +17,20 @@ export class HomePage {
   background: any;
 
   constructor(public navParams: NavParams, public nav: NavController, public dataService: Data, public alertCtrl: AlertController, public storage: Storage, public platform: Platform) {
+    
+   
+  }
+
+  ionViewDidEnter(){
+        this.storage.get('background').then((result) => {
+      if(result != null){
+        this.background = localStorage.getItem('background');
+        console.log(this.background);
+      }
+      else {
+        this.background = "#2C69CC";
+      }
+    });
   }
 
   ionViewDidLoad(){
@@ -162,6 +176,28 @@ export class HomePage {
 
   save(): void {
     this.dataService.save(this.checklists);  	
+  }
+
+  showPrompt(checklist) {
+    let prompt = this.alertCtrl.create({
+      title: 'Delete List',
+      message: "Are you sure you want to delete this list?",
+      buttons: [
+        {
+          text: 'Cancel',
+          handler: data => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Yes',
+          handler: data => {
+            this.removeChecklist(checklist);
+          }
+        }
+      ]
+    });
+    prompt.present();
   }
 
 }

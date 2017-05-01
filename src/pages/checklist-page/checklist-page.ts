@@ -94,4 +94,26 @@ export class ChecklistPage {
 	  	}
 	 }
 
+	showPrompt(item) {
+    let prompt = this.alertCtrl.create({
+      title: 'Delete Item',
+      message: "Are you sure you want to delete this item?",
+      buttons: [
+        {
+          text: 'Cancel',
+          handler: data => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Yes',
+          handler: data => {
+            this.removeItem(item);
+          }
+        }
+      ]
+    });
+    prompt.present();
+  }
+
 }
