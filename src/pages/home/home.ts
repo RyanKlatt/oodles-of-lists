@@ -6,6 +6,7 @@ import { Data } from '../../providers/data';
 import { IntroPage } from '../intro-page/intro-page';
 import { SettingsPage } from '../settings/settings';
 import { Storage } from '@ionic/storage';
+/*import { AdMobFree, AdMobFreeBannerConfig } from '@ionic-native/admob-free';*/
 
 @Component({
   selector: 'home-page',
@@ -16,7 +17,7 @@ export class HomePage {
   checklists: ChecklistModel[] = [];
   background: any;
 
-  constructor(public navParams: NavParams, public nav: NavController, public dataService: Data, public alertCtrl: AlertController, public storage: Storage, public platform: Platform) {
+  constructor(public navParams: NavParams, public nav: NavController, public dataService: Data, public alertCtrl: AlertController, public storage: Storage, public platform: Platform/*, public admob: AdMobFree*/) {
     
    
   }
@@ -28,6 +29,14 @@ export class HomePage {
   ionViewDidLoad(){
  
     this.platform.ready().then(() => {
+
+     /* const bannerConfig: AdMobFreeBannerConfig = {
+       // add your config here
+       // for the sake of this example we will just use the test config
+       isTesting: true,
+       autoShow: true
+      };
+      this.admobFree.banner.config(bannerConfig);*/
 
       this.storage.get('introShown').then((result) => {
         if(!result){
@@ -200,5 +209,21 @@ export class HomePage {
       this.background = "#2C69CC";
       }
    }
+
+   /*showBanner() {
+ 
+        let bannerConfig: AdMobFreeBannerConfig = {
+            isTesting: true, // Remove in production
+            autoShow: true
+            //id: Your Ad Unit ID goes here
+        };
+ 
+        this.admob.banner.config(bannerConfig);
+ 
+        this.admob.banner.prepare().then(() => {
+            // success
+        }).catch(e => console.log(e));
+ 
+    }*/
 
 }

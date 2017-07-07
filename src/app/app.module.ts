@@ -31,7 +31,6 @@ ChecklistPage,
 SettingsPage
 ],
 
-providers: [Storage, Data, Settings]
 })
 
 export class AppModule {}
