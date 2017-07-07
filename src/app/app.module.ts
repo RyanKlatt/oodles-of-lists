@@ -8,6 +8,7 @@ import { ChecklistPage } from '../pages/checklist-page/checklist-page';
 import { SettingsPage } from '../pages/settings/settings';
 import { Data } from '../providers/data';
 import { Settings } from '../providers/settings';
+/*import { AdMobFree } from '@ionic-native/admob-free';*/
 
 @NgModule({
 declarations: [
@@ -31,6 +32,7 @@ ChecklistPage,
 SettingsPage
 ],
 
+providers: [Storage, Data, Settings/*, AdMobFree*/]
 })
 
 export class AppModule {}
